@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<style>
+table {
+	border-collapse: collapse;
+}
+table, th, td {
+	border: 1px solid black;
+	padding: 15px;
+	text-align: center;
+}
+tr:hover {background-colour: #f5f5f5;
+}
+th {
+	background-color: 2d2987
+	color: white;
+}
+</style>
+
+<p class="sightings-box">
+<a href="{% url 'sightings:sightings' %}" class="sightings-link">Back to main page</a>
+</p>
+
+<div class="page-header">
+<h1>Some Cool Stats!</h1>
+</br>
+</div>
+
+<div class="content container">
+
+<table style="width:50%">
+	<caption># of Sightings per Shift</caption>
+		<tr>
+			<th>Shift</th>
+			<th># of Sightings</th>
+		</tr>
+			<tr>
+				<td> PM </td>
+				<td>{{ all_sightings_PM }}</td>
+			</tr>
+			<tr>
+				<td> AM </td>
+                                <td>{{ all_sightings_AM }}</td>	
+			</tr>
+</table>
+</br>
+<table style=“width:50%”>
+	<caption># of Sightings per Fur Color</caption>
+		<tr>
+			<th>Fur Color</th>
+			<th># of Sightings</th>
+		</tr>
+			<tr>
+				<td> Grey </td> 
+				<td>{{ all_sightings_grey }}</td>
+			</tr>
+			<tr>
+                                <td> Cinnamon </td>
+                                <td>{{ all_sightings_cinnamon }}</td>
+                        </tr>
+			<tr>
+                                <td> Black </td>
+                                <td>{{ all_sightings_black }}</td>
+                        </tr>
+</table>
+</br>
+<table style=“width:50%”>
+	<caption># of Sightings per Activity</caption>
+		<tr>
+			<th>Running</th>
+			<th># of Sightings</th>
+		</tr>
+			<tr>
+				<td> Running </td>
+				<td>{{ all_sightings_running }}</td>
+			</tr>
+</table>
+</br>
+<table style=“width:50%”>
+	<caption># of Sightings per Location</caption>
+		<tr>
+			<th>Location</th>
+			<th># of Sightings</th>
+		</tr>
+			<tr>
+				<td> Ground Plane </td>
+				<td>{{ all_sightings_ground_plane }}</td>
+			</tr>
+			<tr>
+                                <td> Above Ground </td>
+                                <td>{{ all_sightings_above_ground }}</td>
+                        </tr>
+</table>
+</br>
+<table style=“width:50%”>
+	<caption># of old and young</caption>
+		<tr>
+			<th>Age</th>
+			<th># of Sightings</th>
+		</tr>
+			<tr>
+				<td> Adult </td> 
+				<td>{{ all_sightings_adult }}</td>
+			</tr>
+			<tr>
+                                <td> Juvenile </td>
+                                <td>{{ all_sightings_juvenile }}</td>
+                        </tr>
+</table>
+</div>
+</html>

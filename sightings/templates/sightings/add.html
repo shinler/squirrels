@@ -1,0 +1,19 @@
+<html>
+<p class="sightings-box">
+<a href="{% url 'sightings:sightings' %}" class="sightings-link">Back to main page</a>
+</p>
+
+<div class=”page-header”>
+<h1>Add a new sighting! </h1>
+</div>
+
+<div class=”content container”>
+<form action="add" method="POST">
+{% csrf_token %}
+<table>
+  {{ form.as_table }}
+  </table>
+  <button type="submit" class = "save btn btn-default">Post!</button>
+</form>
+</div>
+</html>

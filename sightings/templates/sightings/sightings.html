@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sightings</title>
+</head>
+<body>
+
+	<a href = "add">Add A Sighting</a>
+	</br>
+	</br>
+	<a href = "stats">Sighting Statistics</a>	
+<h1>List of Sightings</h1>
+<h2>Click on Squirrel ID to edit sighting</h2>
+<table border="1" width="600">
+<tr>
+<td>Squirrel ID</td>
+<td>Date</td>
+<td>Shift</td>
+</tr>
+
+{% for squirrel in all_sightings %}
+<tr>
+<td><a href = "{% url 'sightings:update' squirrel.unique_squirrel_id %}">{{ squirrel.unique_squirrel_id }}</a></td>
+<td>{{ squirrel.Date }}</td>
+<td>{{ squirrel.Shift }}</td>
+</tr>
+{% endfor %}
+</table>
+
+
+</body>
+</html>
