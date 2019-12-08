@@ -70,7 +70,7 @@ def delete(request, unique_squirrel_id):
     if request.method == "POST":
         squirrel_instance.delete()
         messages.success(request, "Sighting successfully deleted!")
-        return HttpResponseRedirect('sightings')
+        return redirect(f'/sightings')
     context = {'squirrel_instance': squirrel_instance,}
     return render(request, 'sightings/delete.html', context)
 
