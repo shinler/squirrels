@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+	<body>
+<p class="sightings-box">
+<a href="{% url 'sightings:sightings' %}" class="sightings-link">Back to main page</a>
+</p>
+
+<div class="page-header">
+<h1>Delete a Sighting</h1>
+</br>
+</br>
+<h2>Squirrel ID: {{squirrel_instance.unique_squirrel_id}}</h2>
+</div>
+
+<form method="post" action="">
+	{% csrf_token %}
+	Do you really want to delete "{{squirrel_instance.unique_squirrel.id}}"?
+	<input type="submit" value="Yes, delete" />
+	<a href = "{% url 'sightings:sightings' %}">{{ Cancel }}</a>
+</form>
+	</body>
+</html>
