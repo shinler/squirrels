@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<p class="sightings-box">
+<a href="{% url 'sightings:sightings' %}" class="sightings-link">Back to main page</a>
+</p>
+
+<div class="page-header">
+<h1>Edit Sighting! </h1>
+</br>
+</br>
+<h2>Squirrel ID: {{squirrel_instance.unique_squirrel_id}}</h2>
+</div>
+
+<div class="content container">
+{% if error %}<p><strong>{{ error }}</strong></p>{% endif %}
+
+<body>
+<form method="POST" class="form">
+{% csrf_token %}
+	{% for field in form %}
+		<div class="fieldWrapper">
+			{{field.label_tag}} {{field}}
+		</div>
+	{% endfor %}
+	<button type="submit" class="save btn btn-default">Update Sighting!</button>
+	<button type="submit" class="save btn btn-default">Delete Sighting!</button>
+{% if success %}<p><strong>{{ success }}</strong></p>{% endif %}
+</form>
+<a href="{% url 'sightings:delete' squirrel_instance.unique_squirrel_id %}">Delete Sighting!</a>
+
+</body>
+</div>
+</html>
