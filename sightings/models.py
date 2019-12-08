@@ -62,12 +62,12 @@ class Sighting(models.Model):
     
     Specific_Location = models.CharField(help_text=_('Specific Location'), max_length=100, blank=True)
     
-    TRUE = 'True'
-    FALSE = 'False'
+    TRUE = 'true'
+    FALSE = 'false'
 
     True_False = (
-                 (TRUE, 'True'),
-                 (FALSE, 'False')
+                 (TRUE, 'true'),
+                 (FALSE, 'false')
                  )
     
     Running = models.CharField(help_text=_('Running'), max_length=10, choices=True_False)

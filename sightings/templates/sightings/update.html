@@ -23,7 +23,6 @@
 			</div>
 		{% endfor %}
 		<button type="submit" class="save btn btn-default">Update Sighting!</button>
-		<button type="submit" class="save btn btn-default">Delete Sighting!</button>
 		{% if success %}<p><strong>{{ success }}</strong></p>{% endif %}
 		</form>
 		<a href="{% url 'sightings:delete' squirrel_instance.unique_squirrel_id %}">Delete Sighting!</a>
