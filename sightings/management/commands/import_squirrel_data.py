@@ -1,8 +1,6 @@
-import pandas as pd
 import re
 from sightings.models import Sighting
 from django.core.management.base import BaseCommand, CommandError
-import dateutil.parser
 from datetime import date
 class Command(BaseCommand):
     def add_arguments(self, parser):
