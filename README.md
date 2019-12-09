@@ -26,7 +26,7 @@ $ python manage.py export_squirrel_data /path/to/file.csv
 ```
 
 ## API
-Different views location leads you to different APIs 
+Different view locations leads you to different APIs 
 
 > **Sightings**:
 * **Function**: Sightings lists all squirrel sightings with links to edit and update a particular sighting
@@ -46,7 +46,7 @@ Different views location leads you to different APIs
  
 > **Stats**:
 * **Function**: Displays general statistics of sightings  
-* **Located at**: /sightings/stats
+* **Location**: /sightings/stats
 >
 > **Map**:
 * **Function**: Map displays the locations of squirrel sightings
@@ -58,8 +58,10 @@ Different views location leads you to different APIs
 - sqlparse (0.3.0)
 
 ## Additional Notes
-* Plotting more than 100 at once may cause the map to freeze
+* Plotting more than 100 sightings at once may cause the map to freeze
 * Duplicates of squirrel IDs were not imported into the database
+* If a field in the form is filled in incorrectly (e.g. non-existent date), the application will stay at the sightings/add page and will not be able to post a new sighting successfully
+* If a new sighting was added successfully, the user is redirected back to the sightings page
 
 ## App Server link
 ```bash
