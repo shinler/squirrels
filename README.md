@@ -3,14 +3,13 @@
 This file is written to describe the tools and features of this web application.
 
 ## Features
-This Django-based web app keeps track of all recorded sightings found in Central Park in 2018. All data was retrieved from the [2018 US Central Park Squirrel Census](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw). Users of the app can add, edit or delete a squirrel sighting. Additionally, general statistics of the sightings, and a map that visualizes the geographical locations of the sightings can be found. 
+This Django-based web app keeps track of all recorded sightings found in Central Park in 2018. All data was retrieved from the [2018 US Central Park Squirrel Census](https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw). This dataset contains 3023 squirrel sightings, of which 3018 are unique. Users of the app can add, edit or delete a squirrel sighting. Additionally, general statistics of the sightings, and a map that visualizes the geographical locations of the sightings can be found. 
 
 ## Installation
 Clone this repository into your project with the following:
 ```bash
 git@github.com:shinler/squirrels.git
 ```
-
 ## Management Commands
 These commands allow you to import and export the dataset: 
 
@@ -62,8 +61,9 @@ Different views location leads you to different APIs
 * Plotting more than 100 at once may cause the map to freeze
 
 ## App Server link
-[insert link here]
-
+```bash
+https://handy-muse-255501.appspot.com/sightings
+```
 ## Team Members
 <li> Douglas Chan & Shin Ler Low
 <li>UNIs: [sc4619, sl4619]
