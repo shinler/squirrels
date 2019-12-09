@@ -46,7 +46,7 @@ class Sighting(models.Model):
                          (Nil, ''),
                          )
     
-    Primary_Fur_Color = models.CharField(help_text=_('Primary Fur Color'), max_length=20, choices = Primary_Fur_Color, blank=True)
+    Primary_Fur_Color = models.CharField(help_text=_('Primary Fur Color'), max_length=20, choices=Primary_Fur_Color, blank=True)
     
     Ground_Plane = 'Ground Plane'
     Above_Ground = 'Above Ground'
@@ -58,7 +58,7 @@ class Sighting(models.Model):
                (Nil, ''),
                )
     
-    Location = models.CharField(help_text=_('Location'), max_length=100, choices = LOCATION, blank=True)
+    Location = models.CharField(help_text=_('Location'), max_length=100, choices=LOCATION, blank=True)
     
     Specific_Location = models.CharField(help_text=_('Specific Location'), max_length=100, blank=True)
     
