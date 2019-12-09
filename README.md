@@ -45,7 +45,7 @@ Different views location leads you to different APIs
 * **Location**: /sightings/<unique-squirrel-id>
  
 > **Stats**:
-* **Function**: Some Statistics on sightings  
+* **Function**: Displays general statistics of sightings  
 * **Located at**: /sightings/stats
 >
 > **Map**:
@@ -59,6 +59,7 @@ Different views location leads you to different APIs
 
 ## Additional Notes
 * Plotting more than 100 at once may cause the map to freeze
+* Duplicates of squirrel IDs were not imported into the database
 
 ## App Server link
 ```bash
