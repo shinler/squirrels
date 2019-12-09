@@ -69,5 +69,5 @@ https://handy-muse-255501.appspot.com/sightings
 ```
 ## Team Members
 <li> Douglas Chan & Shin Ler Low
-<li>UNIs: [sc4619, sl4619]
+<li>UNIs: [sc4619, sl4617]
 <li>Team 49 Section 2
